@@ -1,0 +1,43 @@
+{
+    "name": "syntro/silverstripe-elemental-baseitem",
+    "description": "A basic item handling permissions for elemental blocks with children",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "elemental",
+        "CMS"
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "silverstripe/framework": "^4",
+        "silverstripe/admin": "^1.0",
+        "dnadesign/silverstripe-elemental": "^4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3.0",
+        "symbiote/silverstripe-phpstan": "^4",
+        "phpstan/phpstan-shim": "~0.11.0"
+    },
+    "scripts": {
+        "phpcs": "~/.composer/vendor/bin/phpcs src/ tests/",
+        "phpcbf": "~/.composer/vendor/bin/phpcbf src/ tests/",
+        "phpstan": "../../bin/phpstan analyse src/ --memory-limit=1G -c phpstan-dev.neon -a ../../symbiote/silverstripe-phpstan/bootstrap.php --no-ansi --level 4",
+        "phpunit": "../../bin/phpunit -c 'phpunit.xml.dev'",
+        "phpunit-flush": "../../bin/phpunit . '' flush=1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Syntro\\SilverStripeElementalBaseitem\\": "src/",
+            "Syntro\\SilverStripeElementalBaseitem\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "process-timeout": 600,
+        "platform": {
+            "ext-intl": "1.0.0"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

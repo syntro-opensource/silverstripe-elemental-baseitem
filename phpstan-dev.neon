@@ -1,0 +1,8 @@
+parameters:
+    autoload_directories:
+        - src
+        - tests
+    ignoreErrors:
+        - '#Call to an undefined method [a-zA-Z0-9\\_]*UncleCheese\\DisplayLogic\\Criteria::isEqualTo\(\)#'
+includes:
+    - ../../symbiote/silverstripe-phpstan/phpstan.neon
