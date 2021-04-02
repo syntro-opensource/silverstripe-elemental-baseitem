@@ -40,6 +40,8 @@ use Syntro\SilverStripeElementalBaseitems\Model\BaseItem;
 
 class Teaser extends BaseItem
 {
+    private static $displays_title_in_template = true;
+
     private static $db = [
         // Whatever you need for the item to render
     ];
@@ -50,9 +52,9 @@ class Teaser extends BaseItem
 }
 ```
 By default, the baseItem has a `Title` and a `ShowTitle` field, similar to the
-BaseElement in elemental. They will also use the title composite field.This
-behaviour can be disabled by setting `displays_title_in_template` to false
-in yaml config or directly in the class.
+BaseElement in elemental. They will also use the title composite field from the
+silverstripe-elemental module. This behaviour can be disabled by setting
+`displays_title_in_template` to false in yaml config or directly in the class.
 
 Then, add the relation to the desired element and configure the gridfield:
 ```php
