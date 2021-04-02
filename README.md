@@ -7,7 +7,12 @@
 
 
 
-This module adds a blank base item which you can use to add sub-items to elements.
+This module adds a blank base item which you can use to add sub-items to elements
+and a gridfield config which mimics the parent ElementalArea feel for these Items.
+
+This module is best used, when the goal is to create an element which acts as a
+holder for some content "blocks". These blocks might for example be cards,
+images in a gallery or slides in a carousel.
 
 
 
@@ -28,21 +33,55 @@ See [License](license.md)
 
 ## Documentation
 
-Simply extend the base item:
+First, simply extend the base item:
 
 ```php
 use Syntro\SilverStripeElementalBaseitems\Model\BaseItem;
 
 class Teaser extends BaseItem
 {
-    // ...
+    private static $db = [
+        // Whatever you need for the item to render
+    ];
+
+    private static $has_one = [
+        'Section' => TeaserCardsBlock::class,
+    ];
 }
 ```
 By default, the baseItem has a `Title` and a `ShowTitle` field, similar to the
-BaseElement in elemental. They will also use the title composite field.
-
-This behaviour can be disabled by setting `displays_title_in_template` to false
+BaseElement in elemental. They will also use the title composite field.This
+behaviour can be disabled by setting `displays_title_in_template` to false
 in yaml config or directly in the class.
+
+Then, add the relation to the desired element and configure the gridfield:
+```php
+use DNADesign\Elemental\Models\BaseElement;
+use Syntro\SilverStripeElementalBaseitems\Forms\GridFieldConfig_ElementalChildren;
+
+class TeaserCardsBlock extends BaseElement
+{
+    private static $has_many = [
+        'Teasers' => Teaser::class
+    ];
+
+    /**
+     * @return FieldList
+     */
+    public function getCMSFields()
+    {
+        $this->beforeUpdateCMSFields(function ($fields) {
+            if ($this->ID) {
+                /** @var GridField $griditems */
+                $griditems = $fields->fieldByName('Root.Teasers.Teasers');
+                $griditems->setConfig(GridFieldConfig_ElementalChildren::create());
+            }
+        });
+        return parent::getCMSFields();
+    }
+}
+```
+
 
 ## Maintainers
  * Matthias Leutenegger <hello@syntro.ch>
