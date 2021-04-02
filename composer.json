@@ -11,7 +11,8 @@
     "require": {
         "silverstripe/framework": "^4",
         "silverstripe/admin": "^1.0",
-        "dnadesign/silverstripe-elemental": "^4"
+        "dnadesign/silverstripe-elemental": "^4",
+        "symbiote/silverstripe-gridfieldextensions": "^3"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",

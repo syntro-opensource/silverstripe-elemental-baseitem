@@ -5,6 +5,10 @@ namespace Syntro\SilverStripeElementalBaseitem\Model;
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
+use SilverStripe\Forms\GridField\GridFieldDeleteAction;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 use SilverStripe\Versioned\Versioned;
 use SilverStripe\Security\Permission;
 use SilverStripe\Control\Director;
@@ -46,8 +50,11 @@ class BaseItem extends DataObject
      */
     private static $db = [
         'Title' => 'Varchar',
-        'ShowTitle' => 'Varchar'
+        'ShowTitle' => 'Varchar',
+        'Sort' => 'Int',
     ];
+
+    private static $default_sort = ['Sort' => 'ASC'];
 
     /**
      * @var array

@@ -1,0 +1,7 @@
+de:
+  Syntro\SilverStripeElementalBaseitem\Forms\GridFieldUnpublishAction:
+    SUCCESS: 'Veroeffentlichung von "{title}" erfolgreich zurueckgezogen'
+    UNPUBLISH: Veröffentlichung zurücknehmen
+  Syntro\SilverStripeElementalBaseitem\Forms\GridFieldPublishAction:
+    SUCCESS: '"{title}" erfolgreich veroeffentlicht'
+    PUBLISH: Veröffentlichen
