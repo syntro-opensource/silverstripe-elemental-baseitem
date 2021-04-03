@@ -8,7 +8,8 @@
 
 
 This module adds a blank base item which you can use to add sub-items to elements
-and a gridfield config which mimics the parent ElementalArea feel for these Items.
+and a gridfield config which mimics the parent ElementalArea feel for these Items,
+allowing an editor to handle these "blocks" like elements.
 
 This module is best used when the goal is to create an element which acts as a
 holder for some content "blocks". These blocks might for example be cards,
