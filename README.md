@@ -38,7 +38,7 @@ See [License](license.md)
 First, simply extend the base item:
 
 ```php
-use Syntro\SilverStripeElementalBaseitems\Model\BaseItem;
+use Syntro\SilverStripeElementalBaseitem\Model\BaseItem;
 
 class Teaser extends BaseItem
 {
@@ -61,7 +61,7 @@ silverstripe-elemental module. This behaviour can be disabled by setting
 Then, add the relation to the desired element and configure the gridfield:
 ```php
 use DNADesign\Elemental\Models\BaseElement;
-use Syntro\SilverStripeElementalBaseitems\Forms\GridFieldConfig_ElementalChildren;
+use Syntro\SilverStripeElementalBaseitem\Forms\GridFieldConfig_ElementalChildren;
 
 class TeaserCardsBlock extends BaseElement
 {
