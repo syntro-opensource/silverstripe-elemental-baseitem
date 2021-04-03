@@ -10,7 +10,7 @@
 This module adds a blank base item which you can use to add sub-items to elements
 and a gridfield config which mimics the parent ElementalArea feel for these Items.
 
-This module is best used, when the goal is to create an element which acts as a
+This module is best used when the goal is to create an element which acts as a
 holder for some content "blocks". These blocks might for example be cards,
 images in a gallery or slides in a carousel.
 
