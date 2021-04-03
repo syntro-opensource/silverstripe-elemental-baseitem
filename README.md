@@ -4,6 +4,7 @@
 [![phpstan](https://img.shields.io/badge/PHPStan-enabled-success)](https://github.com/phpstan/phpstan)
 [![codecov](https://codecov.io/gh/syntro-opensource/silverstripe-elemental-baseitem/branch/master/graph/badge.svg)](https://codecov.io/gh/syntro-opensource/silverstripe-elemental-baseitem)
 [![composer](https://img.shields.io/packagist/dt/syntro/silverstripe-elemental-baseitem?color=success&logo=composer)](https://packagist.org/packages/syntro/silverstripe-elemental-baseitem)
+[![Packagist Version](https://img.shields.io/packagist/v/syntro/silverstripe-elemental-baseitem?label=Current&logo=composer)](https://packagist.org/packages/syntro/silverstripe-elemental-baseitem)
 
 
 
