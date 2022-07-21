@@ -28,11 +28,13 @@ use Syntro\SilverStripeElementalBaseitems\Elements\BootstrapSectionBaseElement;
 class BaseItem extends DataObject
 {
     /**
+     * @config
      * @var string
      */
     private static $singular_name = 'Item';
 
     /**
+     * @config
      * @var string
      */
     private static $plural_name = 'Items';
@@ -46,6 +48,7 @@ class BaseItem extends DataObject
     private static $displays_title_in_template = true;
 
     /**
+     * @config
      * @var array
      */
     private static $db = [
@@ -54,9 +57,14 @@ class BaseItem extends DataObject
         'Sort' => 'Int',
     ];
 
+    /**
+     * @config
+     * @var array
+     */
     private static $default_sort = ['Sort' => 'ASC'];
 
     /**
+     * @config
      * @var array
      */
     private static $searchable_fields = array(
@@ -64,6 +72,7 @@ class BaseItem extends DataObject
     );
 
     /**
+     * @config
      * @var array
      */
     private static $extensions = [
@@ -72,12 +81,13 @@ class BaseItem extends DataObject
 
     /**
      * Adds Publish button.
-     *
+     * @config
      * @var bool
      */
     private static $versioned_gridfield_extensions = true;
 
     /**
+     * @config
      * @var string
      */
     private static $table_name = 'ElementalBaseItem';

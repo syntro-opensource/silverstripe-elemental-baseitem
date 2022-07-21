@@ -98,7 +98,7 @@ class GridFieldUnpublishAction implements GridField_ColumnProvider, GridField_Ac
      *
      * @param  GridField $gridField  the field
      * @param  string    $columnName the column name
-     * @return array
+     * @return array|void
      */
     public function getColumnMetadata($gridField, $columnName)
     {
