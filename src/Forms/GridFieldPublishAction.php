@@ -16,7 +16,6 @@ use SilverStripe\Control\Controller;
  */
 class GridFieldPublishAction implements GridField_ColumnProvider, GridField_ActionProvider, GridField_ActionMenuItem
 {
-
     /**
      * getTitle
      *
@@ -98,7 +97,7 @@ class GridFieldPublishAction implements GridField_ColumnProvider, GridField_Acti
      *
      * @param  GridField $gridField  the field
      * @param  string    $columnName the column name
-     * @return array
+     * @return array|void
      */
     public function getColumnMetadata($gridField, $columnName)
     {

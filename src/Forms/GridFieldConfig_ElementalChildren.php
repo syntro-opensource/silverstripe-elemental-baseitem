@@ -26,7 +26,6 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
  */
 class GridFieldConfig_ElementalChildren extends GridFieldConfig
 {
-
     /**
      * __construct
      *
