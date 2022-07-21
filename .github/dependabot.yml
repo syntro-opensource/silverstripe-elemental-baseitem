@@ -1,7 +1,17 @@
 version: 2
 updates:
+  - package-ecosystem: composer
+    directory: "/"
+    commit-message:
+      prefix: Bump
+    schedule:
+      interval: "daily"
+    assignees:
+      - 'mleutenegger'
   - package-ecosystem: github-actions
     directory: "/"
+    commit-message:
+      prefix: Bump
     schedule:
       interval: "daily"
     assignees:
