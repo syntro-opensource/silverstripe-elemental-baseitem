@@ -16,7 +16,6 @@ use SilverStripe\Control\Controller;
  */
 class GridFieldPublishAction implements GridField_ColumnProvider, GridField_ActionProvider, GridField_ActionMenuItem
 {
-
     /**
      * getTitle
      *

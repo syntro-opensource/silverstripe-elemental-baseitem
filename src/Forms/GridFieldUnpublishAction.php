@@ -16,7 +16,6 @@ use SilverStripe\Control\Controller;
  */
 class GridFieldUnpublishAction implements GridField_ColumnProvider, GridField_ActionProvider, GridField_ActionMenuItem
 {
-
     /**
      * getTitle
      *
