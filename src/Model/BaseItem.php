@@ -251,4 +251,17 @@ class BaseItem extends DataObject
     //     }
     //     return $templates;
     // }
+
+    /**
+     * Event handler called before writing to the database.
+     *
+     * @return void
+     */
+    public function onBeforeWrite()
+    {
+        parent::onBeforeWrite();
+        if ($this->ID == 0) {
+            $this->Sort = static::get()->max('Sort') + 1;
+        }
+    }
 }
