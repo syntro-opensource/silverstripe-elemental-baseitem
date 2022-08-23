@@ -17,6 +17,9 @@ use SilverStripe\Forms\GridField\GridFieldDetailForm;
 use SilverStripe\Versioned\GridFieldArchiveAction;
 use SilverStripe\Versioned\VersionedGridFieldState\VersionedGridFieldState;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
+use Symbiote\GridFieldExtensions\GridfieldTitleHeader;
+
+use SilverStripe\Forms\GridField\GridFieldSortableHeader;
 
 /**
  * Gridfield config specifically crafted for elemental blocks
@@ -53,6 +56,7 @@ class GridFieldConfig_ElementalChildren extends GridFieldConfig
         $this->addComponent($pagination = new GridFieldPaginator($itemsPerPage));
         $this->addComponent(new GridFieldDetailForm(null, $showPagination, $showAdd));
         $this->addComponent(new GridFieldOrderableRows('Sort'));
+        $this->addComponent(new GridfieldTitleHeader());
 
         $filter->setThrowExceptionOnBadDataType(false);
         $pagination->setThrowExceptionOnBadDataType(false);
