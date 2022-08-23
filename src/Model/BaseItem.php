@@ -61,7 +61,7 @@ class BaseItem extends DataObject
      * @config
      * @var array
      */
-    private static $default_sort = ['Sort' => 'ASC'];
+    private static $default_sort = 'Sort';
 
     /**
      * @config
