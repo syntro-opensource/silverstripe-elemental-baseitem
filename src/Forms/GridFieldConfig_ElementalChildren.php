@@ -2,24 +2,23 @@
 
 namespace Syntro\SilverStripeElementalBaseitem\Forms;
 
-use SilverStripe\Forms\GridField\GridFieldConfig;
-use SilverStripe\Forms\GridField\GridFieldButtonRow;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
-use SilverStripe\Forms\GridField\GridFieldToolbarHeader;
-use SilverStripe\Forms\GridField\GridFieldFilterHeader;
+use SilverStripe\Forms\GridField\GridFieldButtonRow;
+use SilverStripe\Forms\GridField\GridFieldConfig;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
-use SilverStripe\Forms\GridField\GridFieldEditButton;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
-use SilverStripe\Forms\GridField\GridField_ActionMenu;
+use SilverStripe\Forms\GridField\GridFieldDetailForm;
+use SilverStripe\Forms\GridField\GridFieldEditButton;
+use SilverStripe\Forms\GridField\GridFieldFilterHeader;
 use SilverStripe\Forms\GridField\GridFieldPageCount;
 use SilverStripe\Forms\GridField\GridFieldPaginator;
-use SilverStripe\Forms\GridField\GridFieldDetailForm;
+use SilverStripe\Forms\GridField\GridFieldSortableHeader;
+use SilverStripe\Forms\GridField\GridFieldToolbarHeader;
+use SilverStripe\Forms\GridField\GridField_ActionMenu;
 use SilverStripe\Versioned\GridFieldArchiveAction;
 use SilverStripe\Versioned\VersionedGridFieldState\VersionedGridFieldState;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
-use Symbiote\GridFieldExtensions\GridfieldTitleHeader;
-
-use SilverStripe\Forms\GridField\GridFieldSortableHeader;
+use Symbiote\GridFieldExtensions\GridFieldTitleHeader;
 
 /**
  * Gridfield config specifically crafted for elemental blocks
@@ -56,7 +55,7 @@ class GridFieldConfig_ElementalChildren extends GridFieldConfig
         $this->addComponent($pagination = new GridFieldPaginator($itemsPerPage));
         $this->addComponent(new GridFieldDetailForm(null, $showPagination, $showAdd));
         $this->addComponent(new GridFieldOrderableRows('Sort'));
-        $this->addComponent(new GridfieldTitleHeader());
+        $this->addComponent(new GridFieldTitleHeader());
 
         $filter->setThrowExceptionOnBadDataType(false);
         $pagination->setThrowExceptionOnBadDataType(false);
