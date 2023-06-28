@@ -2,22 +2,22 @@
 
 namespace Syntro\SilverStripeElementalBaseitem\Model;
 
+use BucklesHusky\FontAwesomeIconPicker\Forms\FAPickerField;
+use DNADesign\Elemental\Forms\TextCheckboxGroupField;
 use SilverStripe\Assets\Image;
-use SilverStripe\ORM\DataObject;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Control\Director;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
-use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
-use SilverStripe\Versioned\Versioned;
+use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Permission;
-use SilverStripe\Control\Director;
-use SilverStripe\CMS\Model\SiteTree;
-use gorriecoe\Link\Models\Link;
-use gorriecoe\LinkField\LinkField;
-use BucklesHusky\FontAwesomeIconPicker\Forms\FAPickerField;
-use DNADesign\Elemental\Forms\TextCheckboxGroupField;
+use SilverStripe\Versioned\Versioned;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 use Syntro\SilverStripeElementalBaseitems\Elements\BootstrapSectionBaseElement;
+use gorriecoe\LinkField\LinkField;
+use gorriecoe\Link\Models\Link;
 
 /**
  * Base Item handling permissions related to the elements and streamlining
@@ -59,7 +59,7 @@ class BaseItem extends DataObject
 
     /**
      * @config
-     * @var array
+     * @var string
      */
     private static $default_sort = 'Sort';
 
