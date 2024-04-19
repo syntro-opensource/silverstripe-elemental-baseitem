@@ -2,8 +2,25 @@
 ## [Unreleased]
 
 
+<a name="1.2.1"></a>
+## [1.2.1] - 2024-04-19
+### 🐞 Fixed
+- improved default sort value generation
+- Use `publishRecursive()` to publish an Item from the gridfield allowing for SS5 compatibility
+
+
+<a name="1.2.0"></a>
+## [1.2.0] - 2023-06-28
+### 🐞 Fixed
+- PHPstan naggin
+- PHPstan naggin
+
+### Pull Requests
+- Merge pull request [#10](https://github.com/syntro-opensource/silverstripe-elemental-baseitem/issues/10) from syntro-opensource/add/SS5-support
+
+
 <a name="1.1.0"></a>
-## [1.1.0] - 2022-08-23
+## [1.1.0] - 2022-08-24
 ### 🐞 Fixed
 - Gridfield config shows column title
 - creating a new item will correctly set a `Sort` value
@@ -30,6 +47,8 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.2.1...HEAD
+[1.2.1]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.2.0...1.2.1
+[1.2.0]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.0.0...1.0.1
