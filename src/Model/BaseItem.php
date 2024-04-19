@@ -260,7 +260,7 @@ class BaseItem extends DataObject
     public function onBeforeWrite()
     {
         parent::onBeforeWrite();
-        if ($this->ID == 0) {
+        if (!$this->Sort) {
             $this->Sort = static::get()->max('Sort') + 1;
         }
     }
