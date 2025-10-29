@@ -91,7 +91,7 @@ class TeaserCardsBlock extends BaseElement
  * Matthias Leutenegger <hello@syntro.ch>
 
 ## Bugtracker
-Bugs are tracked in the issues section of this repository. Before submitting an issue please read over
+Bugs are tracked in the [issues section](https://github.com/syntro-opensource/silverstripe-elemental-baseitem/issues) of this repository. Before submitting an issue please read over
 existing issues to ensure yours is unique.
 
 If the issue does look like a new bug:
