@@ -40,25 +40,21 @@ class GridFieldConfig_ElementalChildren extends GridFieldConfig
     {
         parent::__construct();
 
-        $this->addComponent(new GridFieldButtonRow('before'));
-        $this->addComponent(new GridFieldAddNewButton('buttons-before-left'));
-        $this->addComponent(new GridFieldToolbarHeader());
-        $this->addComponent($filter = new GridFieldFilterHeader());
-        $this->addComponent(new GridFieldDataColumns());
-        $this->addComponent(new VersionedGridFieldState());
-        $this->addComponent(new GridFieldEditButton());
+        $this->addComponent(GridFieldButtonRow::create('before'));
+        $this->addComponent(GridFieldAddNewButton::create('buttons-before-left'));
+        $this->addComponent(GridFieldToolbarHeader::create());
+        $this->addComponent($filter = GridFieldFilterHeader::create());
+        $this->addComponent(GridFieldDataColumns::create());
+        $this->addComponent(GridFieldEditButton::create());
         $this->addComponent(new GridFieldArchiveAction());
         $this->addComponent(new GridFieldUnpublishAction());
         $this->addComponent(new GridFieldPublishAction());
-        $this->addComponent(new GridField_ActionMenu());
-        $this->addComponent(new GridFieldPageCount('toolbar-header-right'));
-        $this->addComponent($pagination = new GridFieldPaginator($itemsPerPage));
-        $this->addComponent(new GridFieldDetailForm(null, $showPagination, $showAdd));
-        $this->addComponent(new GridFieldOrderableRows('Sort'));
-        $this->addComponent(new GridFieldTitleHeader());
-
-        $filter->setThrowExceptionOnBadDataType(false);
-        $pagination->setThrowExceptionOnBadDataType(false);
+        $this->addComponent(GridField_ActionMenu::create());
+        $this->addComponent(GridFieldPageCount::create('toolbar-header-right'));
+        $this->addComponent($pagination = GridFieldPaginator::create($itemsPerPage));
+        $this->addComponent(GridFieldDetailForm::create(null, $showPagination, $showAdd));
+        $this->addComponent(GridFieldOrderableRows::create('Sort'));
+        $this->addComponent(GridFieldTitleHeader::create());
 
         $this->extend('updateConfig');
     }

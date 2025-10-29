@@ -197,6 +197,10 @@ class GridFieldUnpublishAction implements GridField_ColumnProvider, GridField_Ac
         /** @var \SilverStripe\ORM\DataList */
         $list = $gridField->getList();
         $item = $list->byID($arguments['RecordID']);
+
+        // We ignore this error, as the method exists in Versioned extension but
+        // phpstan cannot verify that here.
+        /** @phpstan-ignore method.notFound */
         $item->doUnpublish();
 
         // output a success message to the user
