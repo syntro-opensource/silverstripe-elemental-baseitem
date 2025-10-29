@@ -20,8 +20,8 @@ images in a gallery or slides in a carousel.
 
 ## Requirements
 
-* SilverStripe ^4
-* Silverstripe elemental ^4
+* SilverStripe: `^6`
+* Silverstripe elemental: `^6`
 
 ## Installation
 
