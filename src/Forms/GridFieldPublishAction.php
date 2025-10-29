@@ -197,12 +197,7 @@ class GridFieldPublishAction implements GridField_ColumnProvider, GridField_Acti
         /** @var \SilverStripe\ORM\DataList */
         $list = $gridField->getList();
         $item = $list->byID($arguments['RecordID']);
-
-        try {
-            $item->doPublish();
-        } catch (\Exception $e) {
-            $item->publishRecursive();
-        }
+        $item->publishRecursive();
 
         // output a success message to the user
         Controller::curr()->getResponse()->setStatusCode(
