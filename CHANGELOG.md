@@ -2,6 +2,17 @@
 ## [Unreleased]
 
 
+<a name="2.0.0"></a>
+## [2.0.0] - 2025-10-29
+### 🔧 Changed
+- update to use updated testsuite ([#12](https://github.com/syntro-opensource/silverstripe-elemental-baseitem/issues/12))
+- Updated readme to indicate current Version
+- enable SS6 compatibility
+
+### 🗑 Removed
+- dropped SS4 and SS5 compatibility
+
+
 <a name="1.2.1"></a>
 ## [1.2.1] - 2024-04-19
 ### 🐞 Fixed
@@ -47,7 +58,8 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.2.1...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.2.1...2.0.0
 [1.2.1]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.0.1...1.1.0
