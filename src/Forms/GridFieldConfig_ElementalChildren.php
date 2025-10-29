@@ -57,8 +57,8 @@ class GridFieldConfig_ElementalChildren extends GridFieldConfig
         $this->addComponent(GridFieldOrderableRows::create('Sort'));
         $this->addComponent(GridFieldTitleHeader::create());
 
-        $filter->setThrowExceptionOnBadDataType(false);
-        $pagination->setThrowExceptionOnBadDataType(false);
+        // $filter->setThrowExceptionOnBadDataType(false);
+        // $pagination->setThrowExceptionOnBadDataType(false);
 
         $this->extend('updateConfig');
     }
