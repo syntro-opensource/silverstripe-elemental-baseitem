@@ -45,11 +45,11 @@ class GridFieldConfig_ElementalChildren extends GridFieldConfig
         $this->addComponent(GridFieldToolbarHeader::create());
         $this->addComponent($filter = GridFieldFilterHeader::create());
         $this->addComponent(GridFieldDataColumns::create());
-        $this->addComponent(VersionedGridFieldState::create());
+        $this->addComponent(new VersionedGridFieldState());
         $this->addComponent(GridFieldEditButton::create());
-        $this->addComponent(GridFieldArchiveAction::create());
-        $this->addComponent(GridFieldUnpublishAction::create());
-        $this->addComponent(GridFieldPublishAction::create());
+        $this->addComponent(new GridFieldArchiveAction());
+        $this->addComponent(new GridFieldUnpublishAction());
+        $this->addComponent(new GridFieldPublishAction());
         $this->addComponent(GridField_ActionMenu::create());
         $this->addComponent(GridFieldPageCount::create('toolbar-header-right'));
         $this->addComponent($pagination = GridFieldPaginator::create($itemsPerPage));
