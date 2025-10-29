@@ -45,7 +45,6 @@ class GridFieldConfig_ElementalChildren extends GridFieldConfig
         $this->addComponent(GridFieldToolbarHeader::create());
         $this->addComponent($filter = GridFieldFilterHeader::create());
         $this->addComponent(GridFieldDataColumns::create());
-        $this->addComponent(new VersionedGridFieldState());
         $this->addComponent(GridFieldEditButton::create());
         $this->addComponent(new GridFieldArchiveAction());
         $this->addComponent(new GridFieldUnpublishAction());
@@ -56,9 +55,6 @@ class GridFieldConfig_ElementalChildren extends GridFieldConfig
         $this->addComponent(GridFieldDetailForm::create(null, $showPagination, $showAdd));
         $this->addComponent(GridFieldOrderableRows::create('Sort'));
         $this->addComponent(GridFieldTitleHeader::create());
-
-        // $filter->setThrowExceptionOnBadDataType(false);
-        // $pagination->setThrowExceptionOnBadDataType(false);
 
         $this->extend('updateConfig');
     }
