@@ -15,7 +15,7 @@
         "symbiote/silverstripe-gridfieldextensions": "^5"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.0",
+        "squizlabs/php_codesniffer": "^4.0",
         "cambis/silverstan": "^2.0",
         "phpunit/phpunit": "^11.0"
     },
