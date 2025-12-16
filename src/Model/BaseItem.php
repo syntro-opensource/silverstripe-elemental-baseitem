@@ -53,7 +53,7 @@ class BaseItem extends DataObject
      */
     private static $db = [
         'Title' => 'Varchar',
-        'ShowTitle' => 'Varchar',
+        'ShowTitle' => 'Boolean',
         'Sort' => 'Int',
     ];
 
