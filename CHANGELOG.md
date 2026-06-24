@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="2.0.1"></a>
+## [2.0.1] - 2025-12-16
+### 🐞 Fixed
+- `ShowTitle` of the base item is now correctly defined as boolean
+
+
 <a name="2.0.0"></a>
 ## [2.0.0] - 2025-10-29
 ### 🔧 Changed
@@ -58,7 +64,8 @@
 - initial commit
 
 
-[Unreleased]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/2.0.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/2.0.1...HEAD
+[2.0.1]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.2.1...2.0.0
 [1.2.1]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/syntro-opensource/silverstripe-elemental-baseitem/compare/1.1.0...1.2.0
